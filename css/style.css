@@ -201,6 +201,10 @@ img {
 .button-instagram,
 .button-instagram:active,
 .button-instagram:focus,
+.button-github,
+.button-github:active,
+.button-github:focus
+
 {
     color: #2E112D ;
     background: transparent;
@@ -214,7 +218,8 @@ img {
 .button-linkedin:hover,
 .button-facebook:hover,
 .button-twitter:hover,
-.button-instagram:hover
+.button-instagram:hover,
+.button-github:hover
 {
     background-color: #F8E1FF;
     color: rebeccapurple;
