@@ -1,0 +1,492 @@
+/* ============================================ General CSS ============================================ */
+
+body {
+    font-family: 'Raleway', sans-serif;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+p {
+    font-size: 14px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+    margin-bottom: 30px;
+}
+
+/* ============================================ General CSS ============================================ */
+
+
+
+/* ============================================ Shared items CSS ============================================ */
+
+#about-me-overlay,
+#awards-overlya,
+#contact-me-overlay {
+    background-color: #FAFCFB;
+    padding-bottom: 20px;
+
+}
+
+#portfolio-overlay,
+#voluntary-overlay,
+#footer-overlay {
+    background-color: #1a1a1a;
+    padding-bottom: 20px;
+}
+
+#about-me-title,
+#portfolio-title,
+#awards-title,
+#voluntary-title,
+#contact-me-title {
+    font-size: 60px;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+#portfolio-title,
+#voluntary-title {
+    color: #fff;
+}
+
+.portfolio-project,
+.voluntary-stage {
+    color: #FFF;
+    border: 5px solid #aeaeae;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.portfolio-project,
+.voluntary-stage:hover {
+    border-color: #129CF3;
+    background-color: #000;
+    transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    -webkit-transition: all 1s;
+}
+
+/* ============================================ Shared items CSS ============================================ */
+
+
+
+/* ============================================  Header CSS ============================================ */
+
+
+/* Navigation Bar CSS */
+
+.navbar {
+    margin-top: -150px; /* it's hidden as the header will be shown - when scroll then margin will be changed to 0 through JS function */
+}
+
+.navbar-default {
+    border-color: #1a1a1a;
+    z-index: 110;
+    transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    -webkit-transition: all 1s;
+}
+
+.navbar-default {
+    background-color: cadetblue;
+    opacity: .5;
+}
+
+.navbar:hover,
+.navbar:focus {
+        opacity: 1;
+}
+
+.navbar .navbar-nav > li > a {
+    color: #000;
+    font-family: "Raleway", sans-serif;
+    transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    -webkit-transition: all 1s;
+    
+}
+
+.navbar .navbar-nav > li > a:hover,
+.navbar .navbar-nav > li > a:focus {
+    color: #E80067;
+}
+
+.navbar .navbar-nav > .active>a, 
+.navbar .navbar-nav > .active>a:hover,
+.navbar .navbar-nav > .active>a:focus {
+    background-color: transparent;
+    color: #E80067;
+} 
+
+.navbar-brand h2{
+    color: #2E112D;
+    font-family: Lobster;
+    margin-top: -5px;
+}
+
+.nav-item {
+    font-weight:bolder;
+}
+
+/* Header CSS */
+
+#header-overlay {
+    padding-top: 40px;
+    padding-bottom: 60px;
+}
+
+#header-overlay {
+    background-image: url(../images/header-back.png);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size:cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    -webkit-background-size: cover;
+}
+
+.logo-text {
+    padding-bottom: 60px;
+    color: #2E112D; 
+    font-family: Pacifico;
+}
+
+#header-text #header-name {
+    color: #2E112D;
+    font-size: 100px;
+    font-weight: 300px;
+    line-height: 150px;
+    font-family: Lobster;
+}
+
+#header-text #header-designation {
+    color: #610226;
+    font-weight: bold;
+    font-size: 40px;
+    font-weight: 300;
+    line-height: 50px;
+    font-family: Raleway;
+}
+
+#header-buttons {
+    padding-top:  -top: 20px;
+    padding-bottom: 50px;
+}
+
+#header-buttons a {
+    color: #2E112D;
+}
+
+
+.button-linkedin,
+.button-linkedin:active,
+.button-linkedin:focus,
+.button-facebook,
+.button-facebook:active,
+.button-facebook:focus,
+.button-twitter,
+.button-twitter:active,
+.button-twitter:focus,
+.button-instagram,
+.button-instagram:active,
+.button-instagram:focus,
+{
+    color: #2E112D ;
+    background: transparent;
+    border-radius: 300px;
+    transition: all 1s;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+}
+
+.button-linkedin:hover,
+.button-facebook:hover,
+.button-twitter:hover,
+.button-instagram:hover
+{
+    background-color: #F8E1FF;
+    color: rebeccapurple;
+}
+
+#header-my-pic img {
+    width: 75%;
+    border: 2px solid #129CF3;
+    border-radius: 50%;
+    padding: 3px;
+}
+
+/* ============================================  Header CSS ============================================ */
+
+
+
+/* ============================================ About Me CSS ============================================ */
+
+/* Slider CSS */ 
+
+.slider-title {
+    text-align: center;
+    font-weight: bold;
+}
+
+.sub-title {
+    font-style: oblique;
+    font-size: 20px;
+}
+
+.sub-title h2, .sub-title h3, .extra-info h3 {
+
+    text-align: left;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 13.5px;
+}
+
+.item-details p {
+    font-size: 18px;
+    line-height: 27px;
+    text-align: left;
+}
+
+.personal-info {
+    padding-bottom: 11px;
+}
+
+.btn-cv-download {
+    font-size: 30px;
+    margin-top: 40px;
+}
+.carousel-indicators {
+    bottom: -40px;
+    border: 5px;
+    background-color: cadetblue;
+}
+
+/* ============================================ About Me CSS ============================================ */
+
+
+
+/* ============================================ Portfolio CSS ============================================ */
+
+/* BX Slider CSS */
+.bxslider {
+    width: 100%;
+    height: 100%;
+}
+
+.bxslider img {
+    max-width: 500px;
+    height: 100%;
+}
+
+/* Rest of portfolio CSS */
+
+.project-item {
+    padding-top: 50px;
+}
+
+.project-selectors {
+    color: #fff;
+    font-weight: bolder;
+}
+
+.project-icon {
+    position: relative;
+    color: #129CF3;
+    width: 90px;
+    height: 90px;
+    text-align: center;
+}
+
+.project-image img {
+    max-width: 100%;
+    max-height: 100%;
+    
+    margin-left: auto;
+	margin-right: auto;
+	display: block;
+}
+
+.project-description {
+    color: #fff ;
+    text-align: center;
+}
+
+.project-summary {
+    color: #539DBF;
+    text-align: justify;
+}
+
+.project-state {
+    color: rosybrown;
+    text-align: justify;
+}
+
+/* ============================================ Portfolio CSS ============================================ */
+
+
+
+/* ============================================ Awards CSS ============================================ */
+
+.award-item {
+    background-color:#BFBEBB;
+    color: #2E112D;
+}
+
+.award-heading {
+    margin-top: 20px;
+    margin-left: 40px;
+    font-family: lobster;
+    
+}
+
+.award-details p {    
+    margin-top: 10px;
+    margin-bottom: 20px;
+    margin-left: 40px;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: bold;
+}
+
+/* ============================================ Awards CSS ============================================ */
+
+
+
+/* ============================================ Voluntary CSS ============================================ */
+
+.voluntary-details a,
+.highlight-text {
+    font-weight: bold;
+    color:rosybrown;
+}
+
+
+
+.voluntary-details p {
+    margin-bottom: 10px;
+}
+
+.highlight-title {
+    color: peru;
+}
+
+.voluntary-stage h3 {
+    text-align: left;
+}
+
+/* ============================================ Voluntary CSS ============================================ */
+
+
+
+/* ============================================ Contact Me CSS ============================================ */
+
+#contact-me-message {
+    color: #1a1a1a;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 400;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+/* Contact Form CSS */
+.contact-me-form .form-control {
+    display: block;
+    width: 100%;
+    height: 50px;
+    padding: 12px 12px;
+    font-size: 14px;
+    line-height: 21px;
+    color: #555;
+    background-color: transparent;
+    border: 1px solid #aeaeae;
+    border-radius: 20px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    outline: 0px !important;
+    transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    -webkit-transition: all 1s;
+}
+
+#message {
+    height: 180px;
+    resize: none;
+}
+
+.submit-btn,
+.submit-btn:active,
+.submit-btn:focus,
+.submit-btn:visited {
+    width: 30%;
+    height: 50%;
+    margin-left: 35%;
+    border: 1px solid #129CF3;
+    border-radius: 4px;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: #129CF3;
+    outline: 0px !important;
+    transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
+    -webkit-transition: all 1s;
+}
+
+.submit-btn:hover {
+    background: #610226;
+    border-color: #610226;
+    color: #fff;
+}
+
+/* ============================================ Contact Me CSS ============================================ */
+
+
+
+/* ============================================ Footer CSS ============================================ */
+
+#copyright {
+    width: 50%;
+    padding-top: 10px;
+}
+
+#copyright p {
+    color: #8C8B8A;
+    font-weight: 600;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+#copyright p a {
+    text-decoration: none;
+    color: #129CF3;
+}
+
+#scroll-top {
+    text-align: right;
+}
+
+#scroll-top a {
+    background-color: #129CF3;
+    padding: 25px;
+}
+
+#scroll-top a i {
+    color: #fff;
+    font-size: 25px;
+}
+
+/* ============================================ Footer CSS ============================================ */
