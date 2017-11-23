@@ -1,13 +1,13 @@
+
+
+
 <?php
 if(isset($_POST['email'])) {
  
  
     function died($error,$server_error) {
         // your error code can go here
-        echo "I am very sorry, but there were error(s) found with the form you submitted. ";
-        echo "These errors appear below.<br /><br />";
-        echo $error."<br /><br /><br /><br />";
-        /*echo "Please go back and fix these errors.<br /><br />"*/
+        echo '{ "serverError":true , "message":"There appears to be an error from our side, kindly resubmit the form." }';
         if ($server_error == true){
 
             die();
@@ -20,7 +20,7 @@ if(isset($_POST['email'])) {
     if(!isset($_POST['name']) ||
         !isset($_POST['email'])) {
         $server_error = true;
-        died('There appears to be an error from our side, kindly go back and resubmit.');       
+        died('There appears to be an error from our side, kindly resubmit the form.');       
     }
  
      
@@ -73,25 +73,11 @@ $headers = 'From: '.$email."\r\n".
 @mail($email_to, $email_subject, $email_message, $headers);  
     
     
-?>
-
-
- 
-<!-- include your own success html here -->
-<br><br><br>
-
-
-    <h1 style="style=text-align: center;"> Thank you for contacting me. I will be in touch with you very soon. </h1>
-    <br><br>
-    <h5> you will be redirected automatically in 5 seconds. if your browser doesn't support automatic redirecting then you can click<a href="http://amjadmajed.me"> here </a>  </h5>
-
-
- 
-
-
-<?php
-header( "refresh:5;url=http://amjadmajed.me" );
-die();
+    echo '{ "serverError":false , "resultMessage":"Thank you for contacting me. I will be in touch with you very soon." }';
+    
+    die();
 
 }
 ?>
+
+

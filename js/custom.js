@@ -1,6 +1,6 @@
 /* Show and hide menu */
 'use strict';
-$(document).ready(function(){
+$(document).ready(function() {
 
     new WOW().init();
     
@@ -74,8 +74,7 @@ $(document).ready(function(){
 
 // Validate the Email and check if the that was on purpose
 var emailIntendedToBeInvalid = false;
-function validateEmail(email)   
-{  
+function validateEmail(email) {  
  if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value) == false
     && emailIntendedToBeInvalid == false)  
   {
@@ -85,3 +84,39 @@ function validateEmail(email)
 
 }  
 
+// Submit to the server to email it without moving to the php page
+function submitIt () {
+    
+    var result;
+
+    var formName = document.getElementById("name").value;
+    var formEmail = document.getElementById("email").value;
+    var formSubject = document.getElementById("subject").value;
+    var formMessage = document.getElementById("message").value;
+    
+    var ajaxRequest = $.ajax(
+                    {
+                        url: 'send_form_email.php',
+                        type: 'POST',
+                        dataType: 'text',
+                        data: {name: formName, email: formEmail, subject: formSubject, message: formMessage},
+                        success: function (response)
+                        {
+                            result = response;
+                        },
+                        async: false
+                    });
+    
+    var resultObj = JSON.parse(result);
+
+
+    ajaxRequest.done(function(data) {
+        console.dir(data);
+        alert(resultObj.resultMessage);
+    });
+
+    ajaxRequest.fail(function(data) {
+      console.dir(data);
+        alert(resultObj.resultMessage);
+    });
+}
