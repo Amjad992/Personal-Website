@@ -1049,14 +1049,14 @@
 
                     <div class="container">
                         
-                        <form name="contactform" method="post" action="send_form_email.php">
-                        
+                        <form name="contactform" method="post">
+
                             <div class="row">
 
                                 <div class="col-md-4">
 
                                     <input type="text" class="form-control" name="name" id="name" placeholder="Name">
-                                    <!-- type was intentionally left as text, to give user a chance to keep it blank with no @ --> 
+                                    <!-- type was intentionally left as text, to give user a chance to keep it blank with no @ -->
                                     <input type="text" onchange="validateEmail(email)" class="form-control" name="email" id="email" placeholder="Email">
                                     <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject">
 
@@ -1066,12 +1066,12 @@
 
                                     <textarea class="form-control" name="message" id="message" rows="10" cols="10" placeholder="Message Text...."></textarea>
 
-                                    <button id="submit-button" type="submit" value="Submit" class="btn btn-default submit-btn form_submit">SEND</button>
+                                    <button id="submit-button" type="submit" value="Submit" onclick="submitIt()" class="btn btn-default submit-btn form_submit">SEND</button>
 
                                 </div>
 
                             </div>
-                        
+
                         </form>
                             
 
